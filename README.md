@@ -7,7 +7,10 @@ Introduces specifications for `geojson` and a new `geowkt` type
 
 Additional specifications for `geojson` type
 
-### Example of a point geometry column
+### Examples
+Some examples to illustrate these specification
+
+#### A point geometry column
 
     "fields":[
       {
@@ -25,7 +28,7 @@ Additional specifications for `geojson` type
       }
      ]
      
-### Example of two geometry columns
+#### Two geometry columns
 
     "fields":[
       {
@@ -61,7 +64,7 @@ Additional specifications for `geojson` type
 Here, we have two columns : `geompoint` and `geompolygon`  
 Two polygons can overlap
 
-### Two columns in a different SRS
+#### Two columns in different SRS
     "fields":[
       {
          "name":"geompoint_WGS84",
@@ -177,7 +180,7 @@ Here are some examples of WKT strings :
     (MULTI|multi)?(LINESTRING|linestring)\(((|,\s?)\(((|,\s?)(-?[0-9](\.[0-9]+)?\s-?[0-9](\.[0-9]+)?))+\))+\)
 
 ## TODO
-- additional constraints ? holes, etc...
+- additional constraints ? holes, min and max inter distances between points etc...
 - illustrate
 - develop tools to check these elements
 - proj4, shapely, grass, qgis libraries
