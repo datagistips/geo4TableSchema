@@ -1,5 +1,5 @@
 # spatial-schema
-A proposal for including spatial dimension and checks on geodata with frictionless suite.
+A proposal for including spatial dimension to TableSchema (https://specs.frictionlessdata.io/table-schema/) and implement checks on geodata
 
 Introduces specifications for `geojson` and a new `geowkt` type
 
