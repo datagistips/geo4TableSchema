@@ -82,7 +82,7 @@ Two polygons can overlap
          "description":"Point geometry in RGF93, according to IGN",
          "type":"geojson",
          "geomtype": "Point",                             # point type
-         "srs" : "IGNF:LAMB93",                           # WGS84 - World Geodetic System 1984, used in GPS
+         "srs" : "IGNF:LAMB93",                           # Lambert 93
          "constraints":{
             "required":true,                              # geometry must not be empty
             "unique":true,                                # geometries must be unique
