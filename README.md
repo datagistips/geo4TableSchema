@@ -152,3 +152,14 @@ If `true`, then two polygons can have a gap between them.
 - develop tools to check these elements
 - proj4, shapely, grass, qgis libraries
 
+## Additional resources
+### Spatial Data Package
+- https://github.com/cividi/spatial-data-package
+- https://github.com/cividi/spatial-data-package/discussions
+- https://specs.frictionlessdata.io/data-package/
+
+### frictionless-geojson
+- https://frictionless-hackathon.herokuapp.com/project/9
+- https://pypi.org/project/frictionless-geojson/
+- https://github.com/cividi/frictionless-geojson
+
