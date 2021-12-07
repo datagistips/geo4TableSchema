@@ -5,7 +5,7 @@ Introduces specifications for `geojson` and a new `geowkt` type
 
 ## `geojson`
 
-Additional specifications for geojson type
+Additional specifications for `geojson` type
 
 ### Example of a point geometry column
 
