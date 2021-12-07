@@ -144,7 +144,7 @@ Gaps are one of the topological errors for polygons, besides overlaps. It's a pr
 If `true`, then two polygons can have a gap between them.
 
 ## `geowkt`
-[See this document for the specifications of `geowkt` type field](geowkt)
+[See this document for the specifications of `geowkt` type field](geowkt.md)
 
 ## TODO
 - additional constraints ? holes, min and max inter distances between points etc...
