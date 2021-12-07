@@ -95,7 +95,7 @@ Two polygons can overlap
      ]
      
 ### `geomtype`
-Can be one or many of : `Point`, `LineString`, `Polygon`, `MultiPoint`, `MultiLineString`, `MultiPolygon`
+Can be one or many of : `Point`, `LineString`, `Polygon`, `MultiPoint`, `MultiLineString`, `MultiPolygon`, `GeometryCollection`
 
 Can contain multiple values if multiple geometry types are allowed
 
@@ -105,7 +105,7 @@ If only Point type is authorized :
     geomtype : ["Point"]
     ...
 
-If points and polygons are authorized :
+If (multi)points and (multi)polygons are authorized :
     
     ...
     geomtype : ["Point", "MultiPoint", "Polygon", "MultiPolygon"]
