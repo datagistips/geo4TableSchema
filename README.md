@@ -1,16 +1,16 @@
 # spatial-schema
-A proposal for including spatial dimension to TableSchema (https://specs.frictionlessdata.io/table-schema/) and implement checks on geodata
+A proposal for including spatial dimension to TableSchema (https://specs.frictionlessdata.io/table-schema/) and implement spatial checks on data containing geometry columns
 
 Introduces specifications for `geojson` and a new `geowkt` type
 
 ## `geojson`
-
 Additional specifications for `geojson` type
 
 ### Examples
 Some examples help to illustrate the specifications proposal
 
 #### A point geometry column
+Let's say a CSV file has a `geompoint` column. Below could be its specifications :
 
     "fields":[
       {
@@ -27,6 +27,8 @@ Some examples help to illustrate the specifications proposal
          }
       }
      ]
+     
+> At the end of the document, attributes, properties and possible constraints affected to the spatial dimension are listed
      
 #### Two geometry columns
 
