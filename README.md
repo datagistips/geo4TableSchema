@@ -8,7 +8,7 @@ Introduces specifications for `geojson` and a new `geowkt` type
 Additional specifications for `geojson` type
 
 ### Examples
-Some examples to illustrate these specification
+Some examples help to illustrate the specifications proposal
 
 #### A point geometry column
 
