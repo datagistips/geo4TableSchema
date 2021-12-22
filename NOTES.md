@@ -1,20 +1,27 @@
+### TableSchema
+- https://specs.frictionlessdata.io/table-schema/
+
 ## Spatial Data Package
-https://github.com/cividi/spatial-data-package
+- https://github.com/cividi/spatial-data-package
+- https://github.com/cividi/spatial-data-package/discussions
+- https://specs.frictionlessdata.io/data-package/
 
-https://github.com/cividi/spatial-data-package/discussions
-
-https://specs.frictionlessdata.io/data-package/
+## Data package
+- https://specs.frictionlessdata.io/data-package/
 
 ## Geojson
+- https://frictionless-hackathon.herokuapp.com/project/9
+- https://pypi.org/project/frictionless-geojson/
+- https://github.com/cividi/frictionless-geojson
 
-https://frictionless-hackathon.herokuapp.com/project/9
-
-https://pypi.org/project/frictionless-geojson/
-
-https://github.com/cividi/frictionless-geojson
-
-## RFC
+## RFC GeoJSON
 https://www.rfc-editor.org/rfc/rfc7946
+
+### Spatial issues
+- https://github.com/frictionlessdata/specs/issues?q=spatial
+- https://github.com/henrykironde/spatial-packages
+- https://github.com/frictionlessdata/specs/issues/499
+- https://github.com/frictionlessdata/specs/issues/86#issuecomment-318976645
 
 ## Autres
 https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry
@@ -70,3 +77,13 @@ Pareil pour geometry
 
 ## GeometryCollection
 https://stackoverflow.com/questions/34044893/how-to-make-a-geometrycollection-in-geojson-with-a-single-point-polygon
+
+## Notes
+- rfc 
+- que wgs84
+- geojson
+- bbox
+- left hand right hand
+- left hand rule
+- geojson rewind
+- holes

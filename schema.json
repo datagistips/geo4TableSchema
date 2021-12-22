@@ -1,0 +1,98 @@
+{
+   "$schema":"https://specs.frictionlessdata.io/schemas/table-schema.json",
+   "name":"spatial-data",
+   "title":"Spatial Data",
+   "description":"Specifications for the Spatial Data",
+   "keywords":[
+      "mobility",
+      "city",
+      "smartcity",
+      "car",
+      "traffic",
+      "regulation"
+   ],
+   "countryCode":"FR",
+   "homepage":"https://github.com/datagistips/spatial-schema",
+   "path":"https://github.com/datagistips/spatial-schema/schema.json",
+   "image":"https://github.com/datagistips/spatial-schema/image.png",
+   "licenses":[
+      {
+         "title":"Etalab Licence Ouverte 2.0",
+         "name":"etalab-2.0",
+         "path":"https://spdx.org/licenses/etalab-2.0.html"
+      }
+   ],
+   "resources":[
+      {
+         "title":"Fichier valide",
+         "name":"exemple-valide-csv",
+         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.6.3/exemple-valide.csv"
+      }
+   ],
+   "sources":[
+      {
+         "title":"Fiche technique de rédaction d'arrêté de circulation",
+         "path":"https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/v0.6.3/ressources/fiche_technique_arrete_de_circulation_cle27195e-1.pdf"
+      }
+   ],
+   "created":"2021-12-22",
+   "lastModified":"2021-12-22",
+   "version":"0.6.3",
+   "contributors":[
+      {
+         "title":"Mathieu Rajerison",
+         "email":"mathieu.rajerison@cerema.fr",
+         "organisation":"Cerema",
+         "role":"author"
+      }
+   ],
+   "fields":[
+      {
+         "name":"fid",
+         "title":"Identifier",
+         "description":"Identifier for the entity",
+         "example":"1",
+         "type":"integer",
+         "constraints":{
+            "required":true,
+            "unique":true
+         }
+      },
+      {
+         "name":"label",
+         "title":"Label",
+         "description":"Label.",
+         "example":"My object",
+         "type":"string",
+         "constraints":{
+            "required":false
+         }
+      },
+      {
+         "name":"geompoint",
+         "title":"Point geometry",
+         "description":"Point geometry",
+         "type":"geojson",
+         "geomtype":"point",
+         "crs":"EPSG:4326",
+         "constraints":{
+            "required":true,
+            "unique":true,
+            "overlaps":false,
+            "bounds":[
+               4.9283,
+               43.0756,
+               7.6412,
+               45.0923
+            ]
+         }
+      }
+   ],
+   "missingValues":[
+      "",
+      "NA",
+      "NaN",
+      "N/A"
+   ],
+   "primaryKey":"fid"
+}
