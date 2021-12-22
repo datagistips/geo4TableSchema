@@ -1,0 +1,7 @@
+- [ ] additional constraints ? holes, min and max inter distances between points etc...
+- [ ] illustrate
+- [x] valid and invalid data
+- [ ] schema.json
+- [ ] develop tools to check these elements
+- [ ] proj4, shapely, grass, qgis libraries
+- [ ] bounds of a polygon

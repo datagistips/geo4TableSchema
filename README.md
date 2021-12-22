@@ -146,12 +146,6 @@ If `true`, then two polygons can have a gap between them.
 ## `geowkt`
 [See this document for the specifications of `geowkt` type field](geowkt.md)
 
-## TODO
-- additional constraints ? holes, min and max inter distances between points etc...
-- illustrate
-- develop tools to check these elements
-- proj4, shapely, grass, qgis libraries
-
 ## Additional resources
 ### Spatial Data Package
 - https://github.com/cividi/spatial-data-package
