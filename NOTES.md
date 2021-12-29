@@ -1,4 +1,4 @@
-### TableSchema
+## TableSchema
 - https://specs.frictionlessdata.io/table-schema/
 
 ## Spatial Data Package
@@ -17,11 +17,14 @@
 ## RFC GeoJSON
 https://www.rfc-editor.org/rfc/rfc7946
 
-### Spatial issues
+## Spatial issues
 - https://github.com/frictionlessdata/specs/issues?q=spatial
 - https://github.com/henrykironde/spatial-packages
 - https://github.com/frictionlessdata/specs/issues/499
 - https://github.com/frictionlessdata/specs/issues/86#issuecomment-318976645
+
+## GeoCSV
+https://giswiki.hsr.ch/GeoCSV
 
 ## Autres
 https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry
