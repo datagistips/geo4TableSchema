@@ -4,12 +4,8 @@
    "title":"Spatial Data",
    "description":"Specifications for the Spatial Data",
    "keywords":[
-      "mobility",
-      "city",
-      "smartcity",
-      "car",
-      "traffic",
-      "regulation"
+      "foo",
+      "test"
    ],
    "countryCode":"FR",
    "homepage":"https://github.com/datagistips/spatial-schema",
@@ -24,25 +20,30 @@
    ],
    "resources":[
       {
-         "title":"Fichier valide",
-         "name":"exemple-valide-csv",
+         "title":"Invalid polygon file ",
+         "name":"example-polygon-invalid.csv",
+         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.6.3/exemple-valide.csv"
+      },
+      {
+         "title":"Invalid polygon file with geompol geometry column",
+         "name":"example-polygon-invalid2.csv",
          "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.6.3/exemple-valide.csv"
       }
    ],
    "sources":[
       {
-         "title":"Fiche technique de rédaction d'arrêté de circulation",
-         "path":"https://github.com/CEREMA/schema-arrete-permanent-circulation/blob/v0.6.3/ressources/fiche_technique_arrete_de_circulation_cle27195e-1.pdf"
+         "title":"foo",
+         "path":"foo"
       }
    ],
-   "created":"2021-12-22",
-   "lastModified":"2021-12-22",
+   "created":"2021-12-30",
+   "lastModified":"2021-12-30",
    "version":"0.6.3",
    "contributors":[
       {
          "title":"Mathieu Rajerison",
-         "email":"mathieu.rajerison@cerema.fr",
-         "organisation":"Cerema",
+         "email":"mathieu.rajerison@gmail.com",
+         "organisation":"datagistips",
          "role":"author"
       }
    ],
@@ -69,16 +70,18 @@
          }
       },
       {
-         "name":"geompoint",
-         "title":"Point geometry",
-         "description":"Point geometry",
+         "name":"geompol",
+         "title":"Polygon geometry",
+         "description":"Polygon geometry",
          "type":"geojson",
-         "geomtype":"point",
+         "geomtype":"polygon",
          "crs":"EPSG:4326",
+         "horizontalAccuracy":5,
          "constraints":{
             "required":true,
             "unique":true,
             "overlaps":false,
+            "minArea":100000000,
             "bounds":[
                4.9283,
                43.0756,

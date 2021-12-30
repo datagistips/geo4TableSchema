@@ -1,3 +1,17 @@
+## geopandas
+- is_ring
+- is_simple
+- is_empty
+- geom_equals
+- geom_almost_equals
+- geom_equals_exact
+
+## JSON Schema
+https://json-schema.org/
+
+## Templates
+https://github.com/etalab/tableschema-template/blob/master/schema.json
+
 ## TableSchema
 - https://specs.frictionlessdata.io/table-schema/
 

@@ -78,7 +78,31 @@ Here is the result :
 	>> Entity  5
 	point geometry type is required but Polygon is found
 
-#### CSV files with WKT columns
+## Checks
+Geovalidate provides all these checkings :
+
+- [x] Bounds
+- [x] Coordinate Reference System
+- [x] Unicity
+- [x] Geometry Type
+- [x] Overlaps
+- [ ] Self Intersections
+- [ ] Minimum Area
+- [ ] Minimum Length
+- [ ] Existence of Geometry
+- [ ] Emptiness
+- [ ] Allows multiple geometries
+
+Check the reference documentation to see how to implement them in the schema
+
+### Other
+They are not checked, but can be specified in the schema, for a good use and knowledge of data.
+
+- [ ] Minimum and Maximum Scale
+- [ ] Horizontal Accuracy
+- [ ] Source ?
+
+## CSV files with WKT columns
 You can also check a CSV file with a WKT column. 
 
 For this, just type :
