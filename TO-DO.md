@@ -1,18 +1,17 @@
 - [ ] snake case
-- jupyter
+- [ ] jupyter
 - voir exemple de schéma par etalab
 - [x] test multiples > Annulé
 - [x] Messages d'erreur type frictionless > messages au style personnel
-- [ ] Polygon bounds
+- [ ] Polygon vertexes bounds
 - [x] Use specific names. Rename geometry column to _geom if _geom does not exist
-- [ ] jupyter notebook
 - [ ] script exécutable avec donnée et schéma en entrée
 - [x] schema.json
 - [x] voir les schémas pour geojson > pas pris en compte
-- [ ] contrôler l'existence de la colonne géométrique
+- [x] contrôler l'existence de la colonne géométrique
 - [x] bounds of a polygon
 - [x] CRS
-- [ ] required : Tests if geometry exists
+- [x] required : Tests if geometry exists
 - [ ] additional constraints ? holes, min and max inter distances between points etc...
 - [x] valid and invalid data
 - [ ] holes
@@ -21,3 +20,4 @@
 - [ ] Indicate accuracy horizontale and verticale
 - [ ] Indicate scaleRange : [1:100000, 1:10000]
 - [ ] Indicate scaleZoom : [1, 15]
+- [ ] Fonction pour créer le CSV temporaire

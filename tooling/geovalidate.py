@@ -70,72 +70,70 @@ def controlArea(geom, crs, minArea):
 def controlPresence(data, geomCol):
     ok = True
     n = data[data[geomCol].isnull()].shape[0]
-    print(n)
     if n > 0:
         ok = False
-        print('%d entities without geometries were found :')
+        print('%d entities without geometries were found :'%n)
         for i in range(data.shape[0]):
             value = data[geomCol][i]
             if isinstance(value, float):
                 if math.isnan(value):
                     print('#%d'%i)
-        print('They will be skipped')
+        print('They will be skipped\n')
     return(ok)
     
-def readData(fileName, geomCol = '_geom'):
-    fileExtension = pathlib.Path(fileName).suffix
+def readData(filePath, geomCol = '_geom'):
+    print('File : %s\n'%filePath)
+    fileExtension = pathlib.Path(filePath).suffix
     
     if fileExtension == '.csv' :
-        print('File %s is CSV (it will first be converted to GeoJSON in order to be processed.\n'%fileName)
         
         # Filter data
-        data = pd.read_csv(fileName)
-        data = data[data['geompol'].notnull()]
+        data = pd.read_csv(filePath)
         
-        # Write CSV
-        tempDir = tempfile.gettempdir()
-        tempCSV = pathlib.Path(tempDir)/(pathlib.Path(fileName).stem+'.csv')
-        data.to_csv(tempCSV)
+        # Check if geometry exists
+        okPresence = controlPresence(pd.read_csv(filePath), geomCol)
+        if not okPresence:
+            data = data[data['geompol'].notnull()]
+        
+            # Write CSV
+            tempDir = tempfile.gettempdir()
+            filePath = pathlib.Path(tempDir)/(pathlib.Path(filePath).stem+'.csv')
+            data.to_csv(filePath)
         
         # Rename CSV
         if geomCol != '_geom':
             # Rename
-            data = pd.read_csv(tempCSV).rename(columns = {geomCol:'_geom'})
+            data = pd.read_csv(filePath).rename(columns = {geomCol:'_geom'})
             
             # Write CSV
             tempDir = tempfile.gettempdir()
-            tempCSV = pathlib.Path(tempDir)/(pathlib.Path(fileName).stem+'.csv')
-            data.to_csv(tempCSV)
+            filePath = pathlib.Path(tempDir)/(pathlib.Path(filePath).stem+'.csv')
+            data.to_csv(filePath)
             
         # Read CSV
-        data = Resource(tempCSV)
+        data = Resource(filePath)
             
         # Write GeoJSON
         tempDir = tempfile.gettempdir()
-        tempGeoJSON = pathlib.Path(tempDir)/(pathlib.Path(fileName).stem+'.geojson')
+        tempGeoJSON = pathlib.Path(tempDir)/(pathlib.Path(filePath).stem+'.geojson')
         data.write(tempGeoJSON)
         
         # Read Data
         data = gpd.read_file(tempGeoJSON)
     else:
-        print('File %s is GeoJSON\n'%fileName)
-        
         # Read Data
-        data = gpd.read_file(fileName)
+        data = gpd.read_file(filePath)
     
     return(data)
         
 # Process
-def geovalidate(fileName, schema, geomCol='_geom'):
+def geovalidate(filePath, schema, geomCol='_geom'):
     
     # Schema
     geoSchemaFields = getGeoSchemaFields(schema)
     
-    # Check if geometry exists
-    okPresence = controlPresence(pd.read_csv(fileName), geomCol)
-    
     # Data
-    data = readData(fileName, geomCol)
+    data = readData(filePath, geomCol)
     
     # Control
     for i in range(data.geometry.count()):
