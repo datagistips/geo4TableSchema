@@ -1,3 +1,8 @@
+## validate
+https://github.com/frictionlessdata/frictionless-py
+
+https://github.com/frictionlessdata/frictionless-py/blob/main/CONTRIBUTING.md
+
 ## geopandas
 - is_ring
 - is_simple

@@ -35,3 +35,4 @@
 - [ ] Indicate scaleZoom : [1, 15]
 - [ ] Fonction pour créer le CSV temporaire
 - [ ] holes
+- [ ] Inter-table checks
