@@ -1,3 +1,10 @@
+- [ ] Rapport en json et xml
+- [ ] geometry, format = geojson ou wkt
+- [ ] Area too small
+- [ ] Multiple geometries allowed
+- [ ] If multipolygon, polygon ok
+- [ ] `wkt` type & GeoCSV
+- [ ] Alléger le schéma
 - [ ] snake case
 - [ ] jupyter
 - voir exemple de schéma par etalab

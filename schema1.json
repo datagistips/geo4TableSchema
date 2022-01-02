@@ -73,7 +73,7 @@
          "name":"geompol",
          "title":"Polygon geometry",
          "description":"Polygon geometry",
-         "type":"geojson",
+         "type":"wkt",
          "geomtype":"polygon",
          "crs":"EPSG:4326",
          "horizontalAccuracy":5,
