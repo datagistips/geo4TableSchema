@@ -1,18 +1,22 @@
 - [ ] Rapport en json et xml
 - [ ] geometry, format = geojson ou wkt
-- [ ] Area too small
+- [x] Area too small
 - [ ] Multiple geometries allowed
-- [ ] If multipolygon, polygon ok
+- [x] If multipolygon, polygon ok
 - [ ] `wkt` type & GeoCSV
 - [ ] Alléger le schéma
 - [ ] snake case
 - [ ] jupyter
+- [x] Polygon vertexes bounds
+- [ ] is_empty
+
+		# https://gis.stackexchange.com/questions/168954/what-does-empty-mean-in-wkt?noredirect=1&lq=1
+		POLYGON(EMPTY, (0 0, 0 1, 1 1, 1 0, 0 0)) 
+
 - voir exemple de schéma par etalab
 - [x] test multiples > Annulé
 - [x] Messages d'erreur type frictionless > messages au style personnel
-- [ ] Polygon vertexes bounds
 - [x] Use specific names. Rename geometry column to _geom if _geom does not exist
-- [ ] script exécutable avec donnée et schéma en entrée
 - [x] schema.json
 - [x] voir les schémas pour geojson > pas pris en compte
 - [x] contrôler l'existence de la colonne géométrique
@@ -21,10 +25,13 @@
 - [x] required : Tests if geometry exists
 - [ ] additional constraints ? holes, min and max inter distances between points etc...
 - [x] valid and invalid data
-- [ ] holes
 - [x] utiliser CSV et geojson
 - [x] utiliser CSV et geowkt
+
+## Not sure to implement this ?
+- [ ] script exécutable avec donnée et schéma en entrée
 - [ ] Indicate accuracy horizontale and verticale
 - [ ] Indicate scaleRange : [1:100000, 1:10000]
 - [ ] Indicate scaleZoom : [1, 15]
 - [ ] Fonction pour créer le CSV temporaire
+- [ ] holes

@@ -6,7 +6,11 @@ print('---')
 
 # Invalid polygon layer with 'geompol' column
 # ~ geovalidate('data/csv/invalid-polygon.csv', 'schema1.json') # generates error
-geovalidate('data/csv/invalid-polygon.csv', 'schema1.json', geomCol = 'geompol')
+# ~ geovalidate('data/csv/invalid-polygon.csv', 'schema1.json', geomCol = 'geompol')
+
+# Schema with WKT Bounds
+geovalidate('data/csv/invalid-polygon.csv', 'schema-with-geombounds.json', geomCol = 'geompol')
+
 # ~ print('---')
 
 # Polygon

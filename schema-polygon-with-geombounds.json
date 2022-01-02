@@ -1,0 +1,96 @@
+{
+   "$schema":"https://specs.frictionlessdata.io/schemas/table-schema.json",
+   "name":"spatial-data",
+   "title":"Spatial Data",
+   "description":"Specifications for the Spatial Data",
+   "keywords":[
+      "foo",
+      "test"
+   ],
+   "countryCode":"FR",
+   "homepage":"https://github.com/datagistips/spatial-schema",
+   "path":"https://github.com/datagistips/spatial-schema/schema.json",
+   "image":"https://github.com/datagistips/spatial-schema/image.png",
+   "licenses":[
+      {
+         "title":"Etalab Licence Ouverte 2.0",
+         "name":"etalab-2.0",
+         "path":"https://spdx.org/licenses/etalab-2.0.html"
+      }
+   ],
+   "resources":[
+      {
+         "title":"Invalid polygon file ",
+         "name":"example-polygon-invalid.csv",
+         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.6.3/exemple-valide.csv"
+      },
+      {
+         "title":"Invalid polygon file with geompol geometry column",
+         "name":"example-polygon-invalid2.csv",
+         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.6.3/exemple-valide.csv"
+      }
+   ],
+   "sources":[
+      {
+         "title":"foo",
+         "path":"foo"
+      }
+   ],
+   "created":"2021-12-30",
+   "lastModified":"2021-12-30",
+   "version":"0.6.3",
+   "contributors":[
+      {
+         "title":"Mathieu Rajerison",
+         "email":"mathieu.rajerison@gmail.com",
+         "organisation":"datagistips",
+         "role":"author"
+      }
+   ],
+   "fields":[
+      {
+         "name":"fid",
+         "title":"Identifier",
+         "description":"Identifier for the entity",
+         "example":"1",
+         "type":"integer",
+         "constraints":{
+            "required":true,
+            "unique":true
+         }
+      },
+      {
+         "name":"label",
+         "title":"Label",
+         "description":"Label.",
+         "example":"My object",
+         "type":"string",
+         "constraints":{
+            "required":false
+         }
+      },
+      {
+         "name":"geompol",
+         "title":"Polygon geometry",
+         "description":"Polygon geometry",
+         "type":"wkt",
+         "geomtype":"polygon",
+         "crs":"EPSG:4326",
+         "horizontalAccuracy":5,
+         "constraints":{
+            "required":true,
+            "unique":true,
+            "overlaps":false,
+            "minArea":100000000,
+            "bounds":"POLYGON ((6.561512449318343 42.86044120200139, 5.445690317173171 43.59010057475595, 5.567471813710779 43.8860751165404, 6.032455709581656 44.19521093015088, 6.2391152188576 44.23331451379951, 6.614145636255817 44.27585946282259, 7.184853561048693 44.02066087075947, 7.138592392594731 42.91867862746965, 6.561512449318343 42.86044120200139))"
+         }
+      }
+   ],
+   "missingValues":[
+      "",
+      "NA",
+      "NaN",
+      "N/A"
+   ],
+   "primaryKey":"fid"
+}
