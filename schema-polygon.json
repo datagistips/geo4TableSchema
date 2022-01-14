@@ -21,12 +21,7 @@
    "resources":[
       {
          "title":"Invalid polygon file ",
-         "name":"example-polygon-invalid.csv",
-         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.6.3/exemple-valide.csv"
-      },
-      {
-         "title":"Invalid polygon file with geompol geometry column",
-         "name":"example-polygon-invalid2.csv",
+         "name":"invalid-polygon.csv",
          "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.6.3/exemple-valide.csv"
       }
    ],
@@ -70,7 +65,7 @@
          }
       },
       {
-         "name":"geompol",
+         "name":"_geom",
          "title":"Polygon geometry",
          "description":"Polygon geometry",
          "type":"wkt",

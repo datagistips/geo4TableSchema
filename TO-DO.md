@@ -1,3 +1,9 @@
+### Janvier 2022
+- [ ] Documentation sur wiki
+- [ ] Contrôler l'existence de la variable de type wkt à partir de son nom
+- [ ] Mettre le nom du schéma
+
+### Pre
 - [ ] Rapport en json et xml
 - [ ] geometry, format = geojson ou wkt
 - [x] Area too small
