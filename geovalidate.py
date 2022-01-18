@@ -1,4 +1,4 @@
-from fgeovalidate import *
+from f_geovalidate import *
 
 # Read CLI arguments
 dataPath = sys.argv[1]

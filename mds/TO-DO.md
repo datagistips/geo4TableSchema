@@ -1,6 +1,6 @@
 ### Janvier 2022
 - [ ] Documentation sur wiki
-- [ ] Contrôler l'existence de la variable de type wkt à partir de son nom
+- [x] Contrôler l'existence de la variable de type wkt à partir de son nom
 - [ ] Mettre le nom du schéma
 
 ### Pre

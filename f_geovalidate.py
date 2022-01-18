@@ -116,7 +116,7 @@ def getEmptyGeomRows(data, geomCol):
             if isinstance(value, float):
                 if math.isnan(value):
                     emptyGeomRows.append(i)
-        print('[Warning] %d entities without geometries were found : %s. They will be skipped.\n'%(len(emptyGeomRows), ', '.join([str(elt) for elt in emptyGeomRows])))
+        print('[Warning] %d rows without geometries were found : %s.\n'%(len(emptyGeomRows), ', '.join([str(elt) for elt in emptyGeomRows])))
     return(emptyGeomRows)
     
 # Does the geometry column exist ?
@@ -158,7 +158,7 @@ def readData(filePath, schema, geomCol = None):
             geoFields = getGeoFields(schema)
             geomCol = getGeoField(schema)['name']
             if len(geoFields) == 1:
-                print("Geometry column : '%s' is the geometry column, according to the schema\n"%geomCol)
+                print("Geometry column : '%s' is the geometry column according to the schema\n"%geomCol)
             else :
                 print("%d geometry columns are present in the schema."%(len(geoFields)))
                 print("Only %s will be analysed.\n"%(geomCol))
@@ -170,7 +170,7 @@ def readData(filePath, schema, geomCol = None):
         if not controlGeomColExists(data, geomCol):
             sys.exit("[Error] '%s' geometry column does not exist. Exiting..."%geomCol)
         else:
-            print("Analyzing %s...\n"%geomCol)
+            print("Analyzing '%s' column...\n"%geomCol)
         
         # Get rows without geometries
         emptyGeomRows = getEmptyGeomRows(data, geomCol)
@@ -237,7 +237,7 @@ def geovalidate(dataPath, schemaPath, geomCol = None):
         
         # NULL GEOMETRIES
         if mapping[elt] is None:
-            print('%d : the row does not have a geometry'%elt)
+            print('%d : no geometry'%elt)
         else:
             i = mapping[elt]
         
@@ -258,7 +258,7 @@ def geovalidate(dataPath, schemaPath, geomCol = None):
             # VALID
             okValid = controlValid(geom)
             if not okValid:
-                print('%d : Geometry is not valid'%i)
+                print('%d : geometry not valid'%i)
             
             if 'constraints' in geoField.keys():
                 # BOUNDS
@@ -289,13 +289,13 @@ def geovalidate(dataPath, schemaPath, geomCol = None):
                         geomBounds = getGeomFromWkt(refbb)
                         okBounds = controlBounds(geom, geomBounds)
                         if not okBounds:
-                            print('%d : the geometry is not contained by the bounds geometry'%i)
+                            print('%d : geometry is not contained by the bounds geometry'%i)
 
                 # MINAREA
                 if 'minArea' in geoField['constraints'].keys(): 
                     okArea = controlArea(geom, data.crs.srs, geoField['constraints']['minArea'])
                     if not okArea:
-                        print('%d : Area too small. It is smaller than %d square meters'%(i, geoField['constraints']['minArea']))
+                        print('%d : area too small. It is smaller than %d square meters'%(i, geoField['constraints']['minArea']))
                 
                 # UNIQUE
                 if 'unique' in geoField['constraints'].keys():
@@ -304,7 +304,7 @@ def geovalidate(dataPath, schemaPath, geomCol = None):
                             if j != i:
                                 okUnique = controlUnique(geom, data.geometry[j])
                                 if not okUnique:
-                                    print('%d : %d equals %d (duplicates)'%(i,i,j))
+                                    print('%d : equals %d'%(i, j))
                 
                 # OVERLAPS
                 if 'overlaps' in geoField['constraints'].keys():
@@ -313,4 +313,4 @@ def geovalidate(dataPath, schemaPath, geomCol = None):
                             if j != i:
                                 okOverlaps = controlOverlaps(geom, data.geometry[j])
                                 if not okOverlaps:
-                                    print('%d : %d overlaps %d'%(i, i, j))
+                                    print('%d : overlaps %d'%(i, j))

@@ -14,8 +14,12 @@ data.write('../invalid-polygon.csv')
 # Read data and rename _geom to geompol
 data2 = pd.read_csv('../invalid-polygon.csv')
 
-# Rename
-data3 = data2.rename(columns={"_geom": "geompol"})
+# Empty rows
+n_rows = data2.shape[0]
+empty_data = pd.DataFrame([[n_rows, 'No geometry', None], [n_rows + 1, 'No geometry', None]], columns=['fid', 'label','_geom'], index=['x', 'y'])
+
+# Append
+data3 = data2.append(empty_data)
 
 # Write
-data3.to_csv('../invalid-polygon2.csv')
+data3.to_csv('../invalid-polygon.csv', index = False)
