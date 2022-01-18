@@ -21,12 +21,7 @@
    "resources":[
       {
          "title":"Invalid polygon file ",
-         "name":"example-polygon-invalid.csv",
-         "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.6.3/exemple-valide.csv"
-      },
-      {
-         "title":"Invalid polygon file with geompol geometry column",
-         "name":"example-polygon-invalid2.csv",
+         "name":"invalid-polygon.csv",
          "path":"https://raw.githubusercontent.com/CEREMA/schema-arrete-circulation-marchandises/v0.6.3/exemple-valide.csv"
       }
    ],
@@ -70,11 +65,32 @@
          }
       },
       {
-         "name":"_geom",
-         "title":"Mixed geometry",
-         "description":"Mixed point and polygon geometry",
+         "name":"geomRGF93",
+         "title":"Polygon geometry RGF93",
+         "description":"Polygon geometry RGF93",
          "type":"wkt",
-         "geomtype":["point", "polygon"],
+         "geomtype":"polygon",
+         "crs":"EPSG:2154",
+         "horizontalAccuracy":5,
+         "constraints":{
+            "required":true,
+            "unique":true,
+            "overlaps":false,
+            "minArea":100000000,
+            "bounds":[
+               4.9283,
+               43.0756,
+               7.6412,
+               45.0923
+            ]
+         }
+      },
+      {
+         "name":"_geom",
+         "title":"Polygon geometry",
+         "description":"Polygon geometry",
+         "type":"wkt",
+         "geomtype":"polygon",
          "crs":"EPSG:4326",
          "horizontalAccuracy":5,
          "constraints":{
