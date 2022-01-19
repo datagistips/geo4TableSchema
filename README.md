@@ -1,4 +1,4 @@
-# geo-tableschema
+# geo4TablesShema
 On OpenData portals, we observe a significative proportion of spatial data.
 
 [TableSchema](https://specs.frictionlessdata.io//table-schema/) is used on [schema.data.gouv.fr](schema.data.gouv.fr) but it misses some specifications for spatial data, and tools for checking and validating spatial dimensions are lacking.
