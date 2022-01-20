@@ -1,7 +1,9 @@
 ### Janvier 2022
-- [ ] Documentation sur wiki
+- [ ] Documentation de référence sur wiki
 - [x] Contrôler l'existence de la variable de type wkt à partir de son nom
 - [ ] Mettre le nom du schéma
+- [ ] minLength
+- [ ] increment
 
 ### Pre
 - [ ] Rapport en json et xml
