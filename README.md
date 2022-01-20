@@ -88,8 +88,9 @@ Inside, geographic specifications are mentioned like this  :
 	 }
 }
 ```
+> Check the [REFERENCE page](mds/REFERENCE) to have to the proposal of the spatial tags.
 
-You can see all the news that have been added to TableSchema : the `wkt` type, `geomtype`, `crs`, `overlaps`, `minArea`, `bounds`
+You can see all the new tags that have been added to TableSchema : the `wkt` type, `geomtype`, `crs`, `overlaps`, `minArea`, `bounds`
 
 You can see that the geometry column must be named `_geom` and here are the corresponding requirements, reading this schema :
 
@@ -109,6 +110,8 @@ You can see that the geometry column must be named `_geom` and here are the corr
 We can control our data against the schema (check [`geovalidate.bat`](geovalidate.bat)) :
 
 	python geovalidate.py invalid-polygon.csv schema-polygon.json
+	
+> Check [BATCH-EXAMPLES](mds/BATCH-EXAMPLES.md) to have more examples on running various checks.
 
 Here is the result :
 	
@@ -132,6 +135,8 @@ Here is the result :
 	8 : geometry is not valid
 	9 : no geometry
 	10 : no geometry
+	
+> For the moment, `geovalidate` provides [all these checkings](mds/CHECKS)
 
 ### Python
 In python, you can control data like this :
@@ -142,13 +147,3 @@ geovalidate('../data/invalid-polygon.csv', 'schema-polygon.json')
 ```
 
 [`f_geovalidate.py`](f_geovalidate.py) contains all the functions required to run the controls.
-
-## Checkings
-For the moment, `geovalidate` provides [all these checkings](mds/CHECKS)
-
-## Examples
-You can check [BATCH-EXAMPLES](mds/BATCH-EXAMPLES.md) to have more examples on running various checks.
-
-## Documentation
-Also, you can can check the [REFERENCE page](mds/REFERENCE) to have to the proposal of the spatial specifications.
-
