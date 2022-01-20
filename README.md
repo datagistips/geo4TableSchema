@@ -1,4 +1,4 @@
-# geo4TablesShema
+# geo4TableSchema
 On OpenData portals, we observe a significative proportion of spatial data.
 
 [TableSchema](https://specs.frictionlessdata.io//table-schema/) is used on [schema.data.gouv.fr](schema.data.gouv.fr) but it misses some specifications for spatial data, and tools for checking and validating spatial dimensions are lacking, which can potentially impact the quality of open geodata.
@@ -8,7 +8,7 @@ The purpose of `spatial-schema` is to :
 - **suggest new tags** for TableSchema for spatial aspects (geometry types, bounds, coordinate reference system,...)
 - **demonstrate with a POC** how spatial controls could be made.
 
-Also, this project follows [cividi frictionless-geojson project](https://github.com/cividi/frictionless-geojson).
+Also, this project follows [cividi `frictionless-geojson` project](https://github.com/cividi/frictionless-geojson).
 
 ## Guide
 
@@ -88,7 +88,7 @@ Inside, geographic specifications are mentioned like this  :
 	 }
 }
 ```
-> Check the [REFERENCE page](mds/REFERENCE) to have to the proposal of the spatial tags.
+> Check the [REFERENCE page](mds/REFERENCE.md) to have to the proposal of the spatial tags.
 
 You can see all the new tags that have been added to TableSchema : the `wkt` type, `geomtype`, `crs`, `overlaps`, `minArea`, `bounds`
 
