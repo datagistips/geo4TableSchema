@@ -32,16 +32,19 @@ To analyze `_geom`, you'll have to specify the name of the column as a third arg
 The schema [`schema-polygon-with-geombounds.json`](../schemas/schema-polygon-with-geombounds.json) specifies bounds for the data like this :
 
 	"bounds":"POLYGON ((6.561512449318343 42.86044120200139, 5.445690317173171 43.59010057475595, 5.567471813710779 43.8860751165404, 6.032455709581656 44.19521093015088, 6.2391152188576 44.23331451379951, 6.614145636255817 44.27585946282259, 7.184853561048693 44.02066087075947, 7.138592392594731 42.91867862746965, 6.561512449318343 42.86044120200139))"
+	
+It's the precise geometry of the polygon that must contain the data
 
-Control is made with :
+You can control your data :
 
 	C:\python39\python geovalidate.py invalid-polygon.csv schemas\schema-polygon-with-geombounds.json
 
-And you get :
+You'll get :
 	
 	...
 	6 : the geometry is not contained by the bounds geometry
 	...
+	
 ## Point CSV
 The geometry column in `invalid-point.csv` is named `_geom`
 
