@@ -65,27 +65,29 @@ Let's consider the [schema-polygon.json](schema-polygon.json) schema file.
 
 Inside, geographic specifications are mentioned like this  :
 
-	{
-         "name":"_geom",
-         "title":"Polygon geometry",
-         "description":"Polygon geometry",
-         "type":"wkt",
-         "geomtype":"polygon",
-         "crs":"EPSG:4326",
-         "horizontalAccuracy":5,
-         "constraints":{
-            "required":true,
-            "unique":true,
-            "overlaps":false,
-            "minArea":100000000,
-            "bounds":[
-               4.9283,
-               43.0756,
-               7.6412,
-               45.0923
-            ]
-         }
-      }
+```json
+{
+	 "name":"_geom",
+	 "title":"Polygon geometry",
+	 "description":"Polygon geometry",
+	 "type":"wkt",
+	 "geomtype":"polygon",
+	 "crs":"EPSG:4326",
+	 "horizontalAccuracy":5,
+	 "constraints":{
+	    "required":true,
+	    "unique":true,
+	    "overlaps":false,
+	    "minArea":100000000,
+	    "bounds":[
+	       4.9283,
+	       43.0756,
+	       7.6412,
+	       45.0923
+	    ]
+	 }
+}
+```
 
 You can see all the news that have been added to TableSchema : the `wkt` type, `geomtype`, `crs`, `overlaps`, `minArea`, `bounds`
 
