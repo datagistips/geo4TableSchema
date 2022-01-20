@@ -136,7 +136,7 @@ Here is the result :
 	9 : no geometry
 	10 : no geometry
 	
-> For the moment, `geovalidate` provides [all these checkings](mds/CHECKS)
+> For the moment, `geovalidate` provides [all these checkings](mds/CHECKS.md)
 
 ### Python
 In python, you can control data like this :
