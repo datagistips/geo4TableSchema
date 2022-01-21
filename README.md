@@ -88,7 +88,7 @@ Inside, geographic specifications are mentioned like this  :
 	 }
 }
 ```
-> Check the [REFERENCE page](mds/REFERENCE.md) to have to the proposal of the spatial tags.
+> Check the [REFERENCE page](mds/REFERENCE.md) to have to the complete list (but to be completed) list of spatial tags.
 
 You can see all the new tags that have been added to TableSchema : the `wkt` type, `geomtype`, `crs`, `overlaps`, `minArea`, `bounds`
 
