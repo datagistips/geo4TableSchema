@@ -96,7 +96,7 @@ def controlValid(geom):
     
 # Area
 def controlArea(geom, crs, minArea):
-    ok = (gpd.GeoSeries(geom).set_crs('EPSG:4326').to_crs('EPSG:3857').area > minArea).all()
+    ok = (gpd.GeoSeries(geom).set_crs(crs).to_crs('EPSG:3857').area > minArea).all()
     return(ok)
     
 # Bounds
