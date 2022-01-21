@@ -88,8 +88,6 @@ Inside, geographic specifications are mentioned like this  :
 	 }
 }
 ```
-> Check the [REFERENCE page](mds/REFERENCE.md) to have to the complete list (but to be completed) list of spatial tags.
-
 You can see all the new tags that have been added to TableSchema : the `wkt` type, `geomtype`, `crs`, `overlaps`, `minArea`, `bounds`
 
 You can see that the geometry column must be named `_geom` and here are the corresponding requirements, reading this schema :
@@ -102,7 +100,11 @@ You can see that the geometry column must be named `_geom` and here are the corr
 - Geometries MUST be at least 100000000 square meters
 - Geometries MUST be inside the `[4.9283, 43.0756, 7.6412, 45.0923]` bounding box.
 
+> Check the [REFERENCE page](mds/REFERENCE.md) to have to the complete list (but to be completed) list of spatial tags.
+
 ### Geovalidate
+Now :
+
 - We have the data : [`invalid-polygon.csv`](invalid-polygon.csv)
 - And the schema : [`schema-polygon.json`](schema-polygon.json)
 
