@@ -33,6 +33,9 @@ https://github.com/etalab/tableschema-template/blob/master/schema.json
 - https://pypi.org/project/frictionless-geojson/
 - https://github.com/cividi/frictionless-geojson
 
+### WGS84
+- https://datatracker.ietf.org/doc/html/rfc7946#appendix-B.1
+
 ## RFC GeoJSON
 https://www.rfc-editor.org/rfc/rfc7946
 
