@@ -113,15 +113,16 @@ Now :
 
 #### Command line
 
-We can control our data against the schema (check [`geovalidate.bat`](geovalidate.bat)):
+We can control our data against the schema :
 
 ```shell
 python geovalidate.py invalid-polygon.csv schema-polygon.json
 ```
-
-> Check [BATCH-EXAMPLES](mds/BATCH-EXAMPLES.md) to have more examples on running various checks.
+> Check [`geovalidate.bat`](geovalidate.bat) and [BATCH-EXAMPLES](mds/BATCH-EXAMPLES.md) to have more examples on running various checks.
 
 Here is the result :
+
+```
 File : invalid-polygon.csv
 Geometry column : '\_geom' is the geometry column according to the schema
 Analyzing '\_geom' column...
@@ -138,6 +139,7 @@ Analyzing '\_geom' column...
 8 : geometry is not valid
 9 : no geometry
 10 : no geometry
+```
 
 > For the moment, `geovalidate` provides [all these checkings](mds/CHECKS.md)
 
