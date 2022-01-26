@@ -1,4 +1,5 @@
 # spatial-schema
+
 Here is an overview of specifications proposal for a `geompoint` spatial field :
 
     "fields":[
@@ -22,7 +23,10 @@ This proposal introduces :
 - some **attributes** and **constraints** for `geojson`
 - a new `geowkt` field type
 
+---
+
 ## Spatial data
+
 Geographical data can be of these types :
 
 - **points** like location of elements or events in space
@@ -32,6 +36,7 @@ Geographical data can be of these types :
 But you can not specify these types in Table Schema
 
 ### Attributes & constraints for spatial data
+
 Spatial controls can concern :
 
 - **geometry types** : _"are all my objects of type Point ?"_
@@ -40,18 +45,25 @@ Spatial controls can concern :
 - **unicity** of geometries : _"are my geometries unique ?"_
 
 ### Topology
+
 - **overlaps** : _"do my polygons overlap ?"_
 - **gaps** between polygons : _"are there gaps between my polygons ?"_
 - **slivers**
 
+---
+
 ## Examples
+
 [See some examples](EXAMPLES.md)
 
+---
+
 ## Reference
+
 [Check reference documentation](REFERENCE.md)
 
+---
+
 ## `geowkt`
+
 [Proposal for a `geowkt` field](geowkt.md)
-
-
-
