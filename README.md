@@ -4,7 +4,7 @@ On OpenData portals, we observe a significative proportion of spatial data.
 
 [TableSchema](https://specs.frictionlessdata.io//table-schema/) is used on [schema.data.gouv.fr](schema.data.gouv.fr) but it misses some specifications for spatial data, and tools for checking and validating spatial dimensions are lacking, which can potentially impact the quality of open geodata.
 
-The purpose of `spatial-schema` is to :
+The purpose of `geo4TableSchema` is to :
 
 - **suggest new tags** for TableSchema for spatial aspects (geometry types, bounds, coordinate reference system,...)
 - **demonstrate with a POC** how spatial controls could be made.
